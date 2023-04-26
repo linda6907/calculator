@@ -1,311 +1,118 @@
-<html>
-<head>
-<script type="text/javascript" src="/ruxitagentjs_ICA2NVfqru_10261230220152234.js" data-dtconfig="rid=RID_-1775833412|rpid=1233700833|domain=texas.gov|reportUrl=/rb_ff72b38e-3345-415e-bc12-64cc1416d540|app=b21cc18fc5d0b166|ssc=1|featureHash=ICA2NVfqru|vcv=2|rdnt=1|uxrgce=1|bp=3|cuc=k8ke6rxz|mel=100000|dpvc=1|ssv=4|lastModification=1682487649885|dtVersion=10261230220152234|tp=500,50,0,1|agentUri=/ruxitagentjs_ICA2NVfqru_10261230220152234.js"></script><script src="js/tce.js"></script>
-<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="js/excanvas.js"></script><![endif]-->
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.jqplot.min.js"></script>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-TG8K42Q');
+    </script>
+    <!-- End Google Tag Manager -->
+    <title>Calculator</title>
+    <meta name="author" content="personal testing" />
+    <meta name="modifiedDate" content="2022-03-11" />
+    <meta name="modifiedBy" content="hosu" />
+    <meta name="division" content="it" />
+    <meta name="category" content="help" />
+    <meta
+      name="description"
+      content="In case of inclement weather, natural disaster, or emergency, the Comptrollers office will post messages and information here for Comptroller employees."
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="assets/styles/ctg/core.min.css" />
+    <link rel="stylesheet" href="assets/styles/ctg/section/help.min.css" />
+    <link rel="stylesheet" href="assets/styles/footer.css?v=0.0.2" />
+    <style>
+      .trans-header {
+        margin-bottom: 0.25rem;
+      }
+    </style>
+    <script src="assets/js/ctg/others/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TG8K42Q"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-<script src="js/jqplot.barRenderer.min.js"></script>
-<script src="js/jqplot.categoryAxisRenderer.min.js"></script>
-<script src="js/jqplot.pointLabels.min.js"></script>
+    <header class="global-banner">
+      <div class="clearfix hide-for-print">
+        <div class="show-for-medium global-banner-logo">
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        </div>
+        <div class="show-for-medium global-banner-text">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-
-
-<link rel="stylesheet" href="css/tce.css" />
-<link rel="stylesheet" media="print" href="css/tce-print.css" />
-<link rel="stylesheet" href="css/jquery.jqplot.css" />
-<script>
-         function functionAlert(msg, myYes) {
-            var confirmBox = $("#confirm");
-            confirmBox.find(".message-text").text(msg);
-            confirmBox.find(".yes").unbind().click(function() {
-               confirmBox.hide();
-			   document.getElementById("annual_income").focus();
-            });
-            confirmBox.find(".yes").text(myYes);
-			confirmBox.find(".yes").click(myYes);
-			
-            confirmBox.show();
-			confirmBox.focus();
-			
-			//setTimeout(function(){
-			//	$("#confirm").fadeOut("slow");
-			//},5000)
-         }
-      
-
-	  </script>
-
-<style>
-        #confirm {
-            display: none;
-            background-color: #b8cce4;
-            border: 1px solid #aaa;
-            position: fixed;
-            width: 500px;
-            left: 50%;
-            margin-left: -100px;
-            padding: 6px 8px 8px;
-            box-sizing: border-box;
-            text-align: center;
-         }
-         #confirm button {
-            background-color: #cbdb92;
-            display: inline-block;
-            border-radius: 5px;
-            border: 1px solid #aaa;
-            padding: 5px;
-            text-align: center;
-            width: 400px;
-            cursor: pointer;
-         }
-         #confirm .message {
-            text-align: left;
-         }
-      </style>
-</head>
-
-<body>
-
-<a id="skip2main_area"></a> <!-- name="skip2main_area"  -->
-<div id="confirm" tabindex="-2"><div class = "message"><p class="message-text" tabindex="-1"></p></div><button class="yes"></button></div>
-<div id="calculator-inputs">
-   <h2 class="tce-h2" id="pagetitle">Calculator</h2>
-   <noscript>This page requires Javascript for the Total Compensation Estimator to work.</noscript>
-	<div>Updated 9/28/2022.</div>
-   <!-- <p>As  a State of Texas employee you receive both direct and indirect compensation,  which includes benefits. The State provided benefits package includes  health insurance, retirement contributions, longevity pay, paid time off,  Social Security and Medicare taxes. </p>
-   <p>This  Total Compensation tool is available so that you can obtain an estimate of your  State compensation package.</p> -->
-	
-	<!-- This field is now hidden because it is no longer an option (as of FY 23). At the same time, removing it entirely causes problems in the Javascript, so it needs to remain. Even if is it just a literal at this point. -SB -->
-   <label style="display: none;" for="full_part_time">Select Full Time or Part Time</label><br/><select style="display: none;"  name="Full Part Time" id="full_part_time" onchange="changedFPTimeHours()"><option selected="selected" value="40">Full Time</option><!--option value="30">Part Time (30 hours with insurance benefits)</option><option value="20">Part Time (20 hours)</option--></select>
-	
-   <h3 class="tce-h3">Income</h3>
-   <div class="row">
-      <div class="col-md-6">
-         <label for="annual_income">Annual Income</label> </div>
-      <div class="col-md-6">
-         <input name="Annual Income" title="Annual Income" id="annual_income" onblur="changedAnnualIncome()" type="text" value="0" /> &#160;</div>
-   </div>
-   <div class="row">
-      <div class="col-md-6">
-         <label for="yrs_of_service">Years of State of Texas Service</label> </div>
-      <div class="col-md-6">
-         <input name="Years of Service" title="Years of Service" id="yrs_of_service" onblur="changedYearsOfService()" type="text" value="0" /> &#160;</div>
-   </div>
-   <div class="row">
-      <div class="col-md-6">
-         <label for="before_fy23">Were you hired before September 1, 2022?</label> </div>
-      <div class="col-md-6">
-         <select name="Before FY23" id="before_fy23" onchange="changedHireDate()">
-		   <option selected="selected" value="Yes">Yes</option>
-		   <option value="No">No</option>
-		</select> &#160;</div>
-   </div>
-   <div class="row">
-      <div class="col-md-6"><strong>Annual Longevity Pay</strong><br /> <em>(Longevity pay is provided to full-time employees and the payment is based on an employee's length of State of Texas service.)</em><br /> </div>
-      <div class="col-md-6" id="annual-long-pay">$0.00</div>
-   </div>
-   <div class="row"> 
-      <div class="col-md-6">
-         <label for="brp_num">Receiving Benefit Replacement Pay (BRP)?</label> <br /><em>(BRP applies to current State of Texas employees only.)</em> </div>
-      <div class="col-md-6">
-         <select name="Benefit Replacement Pay" id="brp_num" onblur="changedBenefitReplacementPay()"><option selected="selected" value="0">No - $0.00</option><option value="1026.86">Yes - $1026.86</option> </select> </div>
-   </div>
-   <h3 class="tce-h3">Time Off Benefits</h3>
-   <div class="row">
-      <div class="col-md-6"> Vacation Days / Year </div>
-      <div class="col-md-6" id="vacation_days_1">12</div>
-   </div>
-   <h3 class="tce-h3">Insurance Benefits<br/></h3>
-   <div class="row"> 
-   <div class="col-md-12"><p>Visit ERS’ <a href="https://ers.texas.gov/active-employees/health-benefits" target="_BLANK">Health Benefits</a> page for more information.</p></div>
-      <div class="col-md-6">
-         <p> 
-            <label for="health_ins">Select Health Insurance</label><br/><select name="Health Insurance" id="health_ins" onblur="changedHealthInsurance()">
-			 <option selected="selected" value="waive">Waive</option>
-			 <option value="Consumer_Directed_HealthSelect">Consumer Directed HealthSelect</option><option value="health_select">HealthSelect</option>
-			 <!-- option value="community_first">Community First</option>
-			 <option value="scott_n_white">Scott &amp; White</option --><!-- Removed for FY22 -SB -->
-			 </select></p> 
+        </div>
       </div>
-      <div class="col-md-6">
-         <p id="waive_opt_sel" style="display: inline;"> 
-            <label for="waive_options">Select Waive Option</label><br/><select name="Waive Options" id="waive_options" onblur="changedWaiveOpt()"><option value="waive_no_ins">Complete Opt Out</option><option value="waive_opt">Opt Out Full Time</option></select></p>
-         <p id="ins_coverage_sel" style="display: none;"> 
-            <label for="ins_coverage">Insurance Coverage?</label><br/><select name="Insurance Coverage" id="ins_coverage" onblur="changedCoverage()"><option selected="selected" value="covers_you">You Only</option><option value="covers_spouse">You + Spouse</option><option value="covers_children">You + Children</option><option value="covers_family">You + Family</option> </select></p>
+      <div class="row collapse small-expand title-bar hide-for-medium align-middle hide-for-print">
+        <div class="shrink column title-bar-left">
+          <div class="global-banner-logo">
+
+          </div>
+          <div class="global-banner-text">
+
+          </div>
+        </div>
+        <div class="column title-bar-right">
+        </div>
       </div>
-   </div> 
-</div>
-<div id="dynamic-content" aria-live="polite" aria-atomic="true"> 
-   <h2 class="tce-h2">Compensation Estimate</h2>
-   <!-- The content in this div (particulary the vacation days), is repeated here in this div block because of the attribute 'aria-live="polite"'. Screen readers now won't miss this content when it's changed by the form fields above. But in addition, the div block defined above by the id "calculator-inputs" will not be shown in the printer friendly version of this page. So the bits of information not already repeated below in the tables needs to be redisplayed. To accomplish this, the printer friendly css will pull this paragraph from off screen. -->
-      <p class="off-screen">
-		 
-		<!-- No longer need to display this for FY23. So hid with it some CSS. -SB -->
-		<div style="display: none;">Full/Part Time Status: 
-         <span id="full-part-status">Full Time</span><br/></div>
-	
-		<!-- Still need this though -->
-		Years of Service: 
-         <span id="yos-status">0</span></p>
-      <table style="width: 530px;">
-         <tbody> 
-            <tr>
-               <th scope="col" style="width: 330px;">Income</th>
-               <th class="header-justify" scope="col" style="width: 100px;">Value</th>
-               <th class="header-justify" scope="col" style="width: 100px;">% of Salary</th>
-            </tr>
-            <tr>
-               <td>Annual income</td>
-               <td class="cell-justify" id="ce-ai-value">$0.00</td>
-               <td class="cell-justify">N/A</td>
-            </tr>
-            <tr>
-               <td>Longevity</td>
-               <td class="cell-justify" id="ce-long-value">$0.00</td>
-               <td class="cell-justify" id="ce-long-percent">0.00%</td>
-            </tr>
-            <tr>
-               <td>Benefit Replacement Pay (BRP)</td>
-               <td class="cell-justify" id="ce-brp-value">$0.00</td>
-               <td class="cell-justify" id="ce-brp-percent">0.00%</td>
-            </tr>
-            <tr>
-               <td> 
-                  <strong>Gross Annual Pay</strong></td>
-               <td class="cell-justify" id="ce-gap-value">$0.00</td>
-               <td class="cell-justify">N/A</td>
-            </tr>
-            <tr>
-               <td>Daily wage<br/> (Based on 8 hour days)</td>
-               <td class="cell-justify" id="ce-dw-value">$0.00</td>
-               <td class="cell-justify">N/A</td>
-            </tr>
-         </tbody> 
-      </table>
-      <h3 class="tce-h3">Time Off Benefits</h3>
-      <table style="width: 530px;">
-         <tbody> 
-            <tr>
-               <th scope="col" style="width: 330px;">Benefits</th>
-               <th class="header-justify" scope="col" style="width: 100px;">Value</th>
-               <th class="header-justify" scope="col" style="width: 100px;">% of Salary</th>
-            </tr>
-            <tr>
-               <td>Vacation days 
-                  <span class="off-screen" id="vacation_days_2">(12 days)</span></td>
-               <td class="cell-justify" id="ce-vd-value">$0.00</td>
-               <td class="cell-justify" id="ce-vd-percent">0.00%</td>
-            </tr>
-            <tr>
-               <td>13 paid holidays a year on average</td>
-               <td class="cell-justify" id="ce-ph-value">$0.00</td>
-               <td class="cell-justify" id="ce-ph-percent">0.00%</td>
-            </tr>
-            <tr>
-               <td>Sick days</td>
-               <td class="cell-justify" id="ce-sd-value">$0.00</td>
-               <td class="cell-justify" id="ce-sd-percent">0.00%</td>
-            </tr>
-         </tbody> 
-      </table>
-      <h3 class="tce-h3">Government Benefits</h3>
-      <table style="width: 530px;">
-         <tbody> 
-            <tr>
-               <th scope="col" style="width: 330px;">Benefits</th>
-               <th class="header-justify" scope="col" style="width: 100px;">Value</th>
-               <th class="header-justify" scope="col" style="width: 100px;">% of Salary</th>
-            </tr>
-            <tr>
-               <td>Social Security Benefits state paid 6.2%<br/> (up to $8,239.80)</td>
-               <td class="cell-justify" id="ce-ssb-value">$0.00</td>
-               <td class="cell-justify" id="ce-ssb-percent">6.20%</td>
-            </tr>
-            <tr>
-               <td>Medicare 1.45%</td>
-               <td class="cell-justify" id="ce-mc-value">$0.00</td>
-               <td class="cell-justify" id="ce-mc-percent">0.00%</td>
-            </tr>
-         </tbody> 
-      </table>
-      <h3 class="tce-h3">Insurance Benefits</h3>
-      <table style="width: 530px;">
-         <tbody> 
-            <tr>
-               <th scope="col" style="width: 330px;">Benefits</th>
-               <th class="header-justify" scope="col" style="width: 100px;">Value</th>
-               <th class="header-justify" scope="col" style="width: 100px;">% of Salary</th>
-            </tr>
-            <tr>
-               <td>Medical / year 
-                  <span id="insurance_choice">(Waive, Complete Opt Out - $0.00)</span></td>
-               <td class="cell-justify" id="ce-my-value">$0.00</td>
-               <td class="cell-justify" id="ce-my-percent">0.00%</td>
-            </tr>
-            <tr>
-               <td>Health Savings Account (HSA) 
-                  <br/> (must be enrolled in the Consumer Directed HealthSelect)</td>
-               <td class="cell-justify" id="ce-hsa-value">$0.00</td>
-               <td class="cell-justify" id="ce-hsa-percent">0.00%</td>
-            </tr>
-            <tr>
-               <td>Basic life insurance of $5,000 / year<br/> (must be enrolled in the state&#39;s health plan)</td>
-               <td class="cell-justify" id="ce-blife-value">$0.00</td>
-               <td class="cell-justify" id="ce-blife-percent">0.00%</td>
-            </tr>
-         </tbody> 
-      </table>
-      <h3 class="tce-h3">Annual Retirement Benefits</h3>
-      <table style="width: 530px;">
-         <tbody> 
-            <tr>
-               <th scope="col" style="width: 330px;">Benefits</th>
-               <th class="header-justify" scope="col" style="width: 100px;">Value</th>
-               <th class="header-justify" scope="col" style="width: 100px;">% of Salary</th>
-            </tr>
-            <tr>
-               <td>Retirement account (ERS) employer contribution</td>
-               <td class="cell-justify" id="ce-ra-value">$0.00</td>
-               <td class="cell-justify" id="ce-ra-percent">0.00%</td>
-            </tr>
-         </tbody> 
-      </table>
-      <h3 class="tce-h3">Total Compensation Estimate</h3>
-      <table style="width: 530px;">
-         <tbody> 
-            <tr>
-               <th scope="col" style="width: 330px;">Benefits</th>
-               <th class="header-justify" scope="col" style="width: 100px;">Value</th>
-               <th class="header-justify" scope="col" style="width: 100px;">% of Total  Compensation</th>
-            </tr>
-            <tr>
-               <td> 
-                  <strong>Cost of additional benefits paid by the employer</strong></td>
-               <td class="cell-justify" id="ce-tb-value">$0.00</td>
-               <td class="cell-justify" id="ce-tb-percent">0.00%</td>
-            </tr>
-            <tr>
-               <td> 
-                  <strong>Total compensation including salary and benefits</strong></td>
-               <td class="cell-justify" id="ce-tc-value">$0.00</td>
-               <td class="cell-justify">N/A</td>
-            </tr>
-         </tbody> 
-      </table>
-      <div id="chartdiv" aria-hidden="true">&#160;</div>
-      <p id="chart-alt-txt">Stacked bar graph showing total compensation broken down into salary and cost of benefits.<br/><br/></p>
-</div>
-<script>
-	initLoad();
-</script>
-</body>
+      <div class="row collapse show-for-print">
+        <div class="column title-bar-left">
+          <div class="global-banner-logo">
+
+          </div>
+          <div class="global-banner-text align-right">
+           
+          </div>
+        </div>
+        <div class="column title-bar-right">
+        </div>
+      </div>
+    </header>
+    <main class="main column">
+      <div class="row">
+        <div class="medium-9 small-12 medium-order-1 small-order-2 columns">
+          <h1 class="title uppercase">Calculator</h1>
+          <div id="loadingDiv" class="text-center" style="display: none">
+            <img src="images/loader.gif" alt="page loading image indicator" />
+          </div>
+          <div id="messages">
+          <h2>Calculator details</h2>
+          </div>
+        </div>
+        <div class="medium-3 small-12 medium-order-2 small-order-1 columns pad-top">
+          <h2 class="trans-header">Translation:</h2>
+          <div id="google_translate_element"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-8 small-12 columns"></div>
+      </div>
+    </main>
+    
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+
 </html>
