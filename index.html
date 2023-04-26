@@ -4,20 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-TG8K42Q');
-    </script>
-    <!-- End Google Tag Manager -->
     <title>Calculator</title>
     <meta name="author" content="personal testing" />
     <meta name="modifiedDate" content="2022-03-11" />
@@ -28,30 +14,13 @@
       name="description"
       content="In case of inclement weather, natural disaster, or emergency, the Comptrollers office will post messages and information here for Comptroller employees."
     />
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="stylesheet" href="assets/styles/ctg/core.min.css" />
-    <link rel="stylesheet" href="assets/styles/ctg/section/help.min.css" />
-    <link rel="stylesheet" href="assets/styles/footer.css?v=0.0.2" />
     <style>
       .trans-header {
         margin-bottom: 0.25rem;
       }
     </style>
-    <script src="assets/js/ctg/others/jquery.min.js"></script>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-TG8K42Q"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <header class="global-banner">
       <div class="clearfix hide-for-print">
         <div class="show-for-medium global-banner-logo">
@@ -90,9 +59,6 @@
       <div class="row">
         <div class="medium-9 small-12 medium-order-1 small-order-2 columns">
           <h1 class="title uppercase">Calculator</h1>
-          <div id="loadingDiv" class="text-center" style="display: none">
-            <img src="images/loader.gif" alt="page loading image indicator" />
-          </div>
           <div id="messages">
           <h2>Calculator details</h2>
           </div>
@@ -106,12 +72,7 @@
         <div class="medium-8 small-12 columns"></div>
       </div>
     </main>
-    
-    <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-      }
-    </script>
+       <script src="js/calculator.js"></script>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 
