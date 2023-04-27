@@ -1,0 +1,16 @@
+footer,
+.footer {
+  position: fixed;
+  color: #fff !important;
+  background-color: #111 !important;
+  height: 50px;
+}
+footer a,
+.footer a {
+  color: #fff;
+}
+footer a:hover,
+.footer a:hover {
+  border-bottom: 1px dotted #fff;
+  color: #fff;
+}
